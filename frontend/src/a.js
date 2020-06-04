@@ -1,7 +1,7 @@
 let base64 = require('base-64');
 
 
-let email: loginInputs[0].value;
+let email: loginInputs[0].value; edited
 let password: loginInputs[1].value;
 
 let headers = new Headers();
