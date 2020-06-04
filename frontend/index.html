@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Google Map</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+  body {font-family: Arial, Helvetica, sans-serif;}
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+    #map{
+      height:400px;
+      width:100%;
+
+    }
+    #myChats {
+      width: 25%;
+      padding: 50px 0;
+      text-align: center;
+      background-color: lightblue;
+      margin-top: 20px;
+      float:left;
+
+    }
+
+    #myFavs {
+      width: 25%;
+      padding: 50px 0;
+      text-align: center;
+      background-color: lightblue;
+      margin-top: 20px;
+      float:right;
+    }
+
+  </style>
+</head>
+<body>
+  <h2>Love Thy Neighbor</h2>
+
+  <!-- Trigger/Open The Modal -->
+  <button id="signupBtn">Signup</button>
+  <button id="loginBtn">Login</button>
+
+  <!-- The Modal -->
+  <div id="signupModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Signup</p>
+      <div id="signup-form">
+               <form>
+                   <input type="text" name="email" value="" placeholder="Username" class="signup-input">
+                   <br>
+                   <input type="password" name="password" value="" placeholder="Password" class="signup-input">
+                   <br>
+                   <input type="submit" name="Signup" value="Signup" class="submit">
+                 </form>
+        </div>
+    </div>
+
+  </div>
+
+  <div id="loginModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Login</p>
+      <div id="login-form">
+               <form>
+                   <input type="text" name="email" value="" placeholder="Username" class="login-input">
+                   <br>
+                   <input type="password" name="password" value="" placeholder="Password" class="login-input">
+                   <br>
+                   <input type="submit" name="Login" value="Login" class="submit">
+                 </form>
+        </div>
+    </div>
+
+  </div>
+
+<div id="welcome"></div>
+  <script src="src/practice.js"></script>
+  <script src="src/index.js"></script>
+</body>
+</html>

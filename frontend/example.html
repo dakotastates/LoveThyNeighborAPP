@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Google Map</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    #map{
+      height:400px;
+      width:100%;
+    }
+    #myChats {
+      width: 25%;
+      padding: 50px 0;
+      text-align: center;
+      background-color: lightblue;
+      margin-top: 20px;
+      float:left;
+
+    }
+
+    #myFavs {
+      width: 25%;
+      padding: 50px 0;
+      text-align: center;
+      background-color: lightblue;
+      margin-top: 20px;
+      float:right;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="signup-form">
+           <form>
+               <h3>Sign Up or Login Here:</h3>
+               <input type="text" name="email" value="" placeholder="Username" class="signup-input">
+               <br>
+               <input type="password" name="password" value="" placeholder="Password" class="signup-input">
+               <br>
+               <input type="submit" name="submit" value="Submit" class="submit">
+       </form>
+    </div>
+
+
+<div id="main">
+  <div id="appName"></div>
+    <h1>Love Thy Neighbor</h1>
+  <div id="map"></div>
+
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7PogTaDvIRVW8jHj-st3fefaZdB72iiE&callback=initMap">
+  </script>
+  <script src="src/index.js"></script>
+
+  <button onclick="myChatsFunction()">My Chats</button>
+  <button onclick="myFavsFunction()">My Favs</button>
+
+
+  <div id="myFavs">
+    <h3>Here are your Favorite Profiles</h3>
+  </div>
+
+  <div id="myChats">
+    <h3>Here are your chats</h3>
+  </div>
+
+
+</div>
+</body>
+</html>
